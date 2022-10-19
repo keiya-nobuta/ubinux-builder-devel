@@ -34,6 +34,8 @@ RUN apt update \
     bsdmainutils \
     systemd-sysv \
     locales \
+    curl \
+    sudo \
   && apt autoremove -y
 
 RUN locale-gen en_US.UTF-8
