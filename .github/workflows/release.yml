@@ -25,7 +25,7 @@ jobs:
       id: meta
       uses: docker/metadata-action@v3
       with:
-        images: ghcr.io/keiya-nobuta/ubinux-builder
+        images: ghcr.io/${{ github.repository_owner }}/ubinux-builder
         tags: |
           type=ref,event=branch
           type=ref,event=tag
