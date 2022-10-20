@@ -21,6 +21,7 @@ RUN apt update \
     python3-jinja2 \
     python3-pytest-pylint \
     python3-subunit \
+    python-is-python3 \
     xz-utils \
     debianutils \
     iputils-ping \
