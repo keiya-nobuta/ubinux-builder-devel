@@ -1,0 +1,24 @@
+name: 'bitbake-action'
+description: 'ubinux bitbake'
+inputs:
+  machine:
+    description: 'Target MACHINE'
+    required: false
+    default: 'x86-64'
+  target:
+    description: 'BitBake TARGET'
+    required: true
+    default: 'ubinux-all package-index'
+  siteconf:
+    description: 'PATH to site.conf'
+    required: false
+    default: ''
+
+runs:
+  using: 'docker'
+  image: 'ghcr.io/keiya-nobuta/ubinux-builder:latest'
+  entrypoint: '/entrypoint.sh'
+  args:
+    - ${{ inputs.machine }}
+    - ${{ inputs.target }}
+    - ${{ inputs.siteconf }}
